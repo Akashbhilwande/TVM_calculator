@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+    <title>Monthly Installments</title>
+</head>
+<body>
+    <h2>Monthly Installments</h2>
+    <p><strong>Fixed Monthly Payment:</strong> {{ monthly_payment | round(4) }}</p>
+    <table border="1" class="table">
+        <tr>
+            <th>Month</th>
+            <th>TVM Monthly</th>
+        </tr>
+        {% for month, emi in monthly_values %}
+        <tr>
+            <td>{{ month }}</td>
+            <td>{{ emi }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <button href="/">Go Back</button>
+</body>
+</html>

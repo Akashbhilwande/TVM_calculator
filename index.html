@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Monthly Value</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+            <h2>Enter the Initial Amount</h2>
+            <input type="number" name="number1" required>
+            
+            <h2>Enter the Interest Rate</h2>
+            <input type="number" name="number2" required>
+            
+            <h2>Enter the Duration in years</h2>
+            <input type="number" name="number3" required>
+            
+            <br><br><br>
+            <button type="submit" name="button1">Submit</button>
+        </form>
+    </div>
+    <div class="container1">
+        <button type="button" name="buton2">FD</button>
+    </div>
+</body>
+</html>
